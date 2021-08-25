@@ -1,13 +1,21 @@
-import { Button } from '@material-ui/core';
+import { useState } from 'react';
+import BlogList from './BlogList';
 
 const Home = () => {
-  const handleClick = () => {
-    console.log('Hello, Bloggers');
+  const [blogs, setBlogs] = useState([
+    { title: 'My new website', body: 'loresm ipsum...', author: 'amar', id: 1 },
+    { title: 'Welcome party', body: 'loresm ipsum...', author: 'joshi', id: 2 },
+    { title: 'Web dev tips', body: 'loresm ipsum...', author: 'anand', id: 3 },
+  ]);
+
+  const handleDelete = (id) => {
+    const newBlogs = blogs.filter((blog) => blog.id !== id);
+    setBlogs(newBlogs);
   };
+
   return (
     <div className="home">
-      <h2>Home page</h2>
-      <Button variant="outlined" color="secondary"  onClick={handleClick}>click me</Button>
+      <BlogList blogs={blogs} handleDelete={handleDelete} />
     </div>
   );
 };
