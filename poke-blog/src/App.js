@@ -9,9 +9,9 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Route exact path='/' component={Home}/>
-        <Route path='/contact' component={Contact}/>
-        <Route path='/About' component={About}/>
+        <Route exact path="/" component={Home} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/About" component={About} />
       </div>
     </Router>
   );

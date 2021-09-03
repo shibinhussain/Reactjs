@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Contact = () => {
+const Contact = (props) => {
+  // setTimeout(() => {
+  //   props.history.push('/about');
+  // }, 2000);
   return (
     <div className="container">
       <h4 className="center">Contact</h4>
@@ -12,13 +15,7 @@ const Contact = () => {
         in use before Letraset made it popular as a dummy text in the 1960s,
         although McClintock says he remembers coming across the lorem ipsum
         passage in a book of old metal type samples. So far he hasn't relocated
-        where he once saw the passage, but the popularity of Cicero in the 15th
-        century supports the theory that the filler text has been used for
-        centuries. And anyways, as Cecil Adams reasoned, “[Do you really] think
-        graphic arts supply houses were hiring classics scholars in the 1960s?”
-        Perhaps. But it seems reasonable to imagine that there was a version in
-        use far before the age of Letraset. McClintock wrote to Before & After
-        to explain his discovery.
+        where he once saw the passage, but the popularity of Cicero in the 15th.
       </p>
     </div>
   );
