@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import { deletePost } from '../actions/postActions';
 
 class Post extends Component {
   handleClick = () => {
@@ -22,7 +23,6 @@ class Post extends Component {
   // }
 
   render() {
-
     let styles = {
       //inline-styling
       fontWeight: 'bold',
@@ -57,7 +57,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     deletePost: (id) => {
-      dispatch({ type: 'DELETE_POST', id: id });
+      dispatch(deletePost(id));
     },
   };
 };
