@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Pokeball from '../pokeball.png';
-
+import { connect } from 'react-redux';
 
 class Home extends Component {
   // state = {
@@ -16,7 +16,8 @@ class Home extends Component {
   //   });
   // }
   render() {
-    const { posts } = this.state;
+    // console.log(this.props);
+    const { posts } = this.props;  //this.state
     const postList = posts.length ? (
       posts.map((post) => {
         return (
@@ -43,4 +44,10 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps=(state)=>{
+  return{
+    posts: state.posts
+  }
+}
+
+export default connect(mapStateToProps)(Home);
