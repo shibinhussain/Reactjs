@@ -15,19 +15,24 @@ class Post extends Component {
         });
       });
   }
+
   render() {
+    let styles = {
+      //inline-styling
+      fontWeight: 'bold',
+      fontSize: '1em',
+    };
     const post = this.state.post ? (
       <div className="post">
         <h4 className="center">{this.state.post.title}</h4>
         <p>{this.state.post.body}</p>
       </div>
     ) : (
-      <div className="center">Loading post...</div>
-    );
-    return (
-      <div className="container">{post}
+      <div className="center" style={styles}>
+        Loading post...
       </div>
     );
+    return <div className="container">{post}</div>;
   }
 }
 

@@ -3,17 +3,18 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Pokeball from '../pokeball.png';
 
+
 class Home extends Component {
-  state = {
-    posts: [],
-  };
-  componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/posts').then((res) => {
-      this.setState({
-        posts: res.data.slice(0, 15),
-      });
-    });
-  }
+  // state = {
+  //   posts: [],
+  // };
+  // componentDidMount() {
+  //   axios.get('https://jsonplaceholder.typicode.com/posts').then((res) => {
+  //     this.setState({
+  //       posts: res.data.slice(0, 15),
+  //     });
+  //   });
+  // }
   render() {
     const { posts } = this.state;
     const postList = posts.length ? (
