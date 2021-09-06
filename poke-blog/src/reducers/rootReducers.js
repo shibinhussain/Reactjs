@@ -34,9 +34,9 @@ const rootReducer = (state = initState, action) => {
       return action.id !== post.id;
     });
     return {
-        ...state,
-        posts: newPosts
-    }
+      ...state,
+      posts: newPosts,
+    };
   }
   return state;
 };
